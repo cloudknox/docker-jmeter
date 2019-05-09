@@ -5,10 +5,6 @@
 # Example for using User Defined Variables with JMeter
 # These will be substituted in JMX test script
 # See also: http://stackoverflow.com/questions/14317715/jmeter-changing-user-defined-variables-from-command-line
-export TARGET_HOST="www.map5.nl"
-export TARGET_PORT="80"
-export TARGET_PATH="/kaarten.html"
-export TARGET_KEYWORD="Kaartdiensten"
 
 T_DIR=perf
 
@@ -20,7 +16,6 @@ mkdir -p ${R_DIR}
 /bin/rm -f ${T_DIR}/test-plan.jtl ${T_DIR}/jmeter.log  > /dev/null 2>&1
 
 ./run.sh -Dlog_level.jmeter=DEBUG \
-       -Jjmeter.save.saveservice.output_format=xml \
 	-n -t ${T_DIR}/stagingPerfSanity1.jmx -l ${T_DIR}/test-plan.jtl -j ${T_DIR}/jmeter.log \
 	-e -o ${R_DIR}
 

@@ -6,7 +6,7 @@
 # These will be substituted in JMX test script
 # See also: http://stackoverflow.com/questions/14317715/jmeter-changing-user-defined-variables-from-command-line
 
-T_DIR=perf
+T_DIR=results
 
 # Reporting dir: start fresh
 R_DIR=${T_DIR}/report

@@ -16,7 +16,7 @@ mkdir -p ${R_DIR}
 /bin/rm -f ${T_DIR}/test-plan.jtl ${T_DIR}/jmeter.log  > /dev/null 2>&1
 
 ./run.sh -Dlog_level.jmeter=DEBUG \
-	-n -t ${T_DIR}/stagingPerfSanity1.jmx -l ${T_DIR}/test-plan.jtl -j ${T_DIR}/jmeter.log
+	-n -t ${T_DIR}/prodPerfSanity1.jmx -l ${T_DIR}/test-plan.jtl -j ${T_DIR}/jmeter.log
 
 echo "==== jmeter.log ===="
 cat ${T_DIR}/jmeter.log
